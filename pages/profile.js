@@ -1,10 +1,12 @@
 import Account from '../components/Account';
+import PlayWithDb from '../components/PlayWithDb';
 import { supabase } from '../lib/supabaseClient';
 
 function profile() {
   return (
-    <div>
+    <div className="h-screen text-white bg-gray-800">
       <Account />
+      <PlayWithDb />
     </div>
   );
 }
@@ -13,6 +15,7 @@ export default profile;
 
 export const getServerSideProps = async ({ req }) => {
   const { user } = await supabase.auth.api.getUserByCookie(req);
+  console.log(user);
   if (!user) {
     // If no user, redirect to index.
     return { props: {}, redirect: { destination: '/login', permanent: false } };

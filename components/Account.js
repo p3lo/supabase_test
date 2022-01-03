@@ -72,7 +72,7 @@ export default function Account() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen mx-auto space-y-5 text-white bg-gray-800">
+    <div className="flex flex-col items-center justify-center py-10 mx-auto space-y-5 text-white bg-gray-800">
       <div className="grid grid-cols-2 space-x-4">
         <label className="items-end text-right" htmlFor="email">
           Email
@@ -104,7 +104,7 @@ export default function Account() {
         />
       </div>
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col space-y-4">
         <button
           className="p-3 border"
           onClick={() => updateProfile({ username, website, avatar_url })}

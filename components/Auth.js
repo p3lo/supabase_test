@@ -31,8 +31,8 @@ export default function Auth() {
   }
 
   return (
-    <div className="grid grid-cols-3 text-white bg-gray-800">
-      <div className="flex flex-col items-center justify-center h-screen col-start-2 space-y-4">
+    <div className="grid grid-cols-3 ">
+      <div className="flex flex-col items-center justify-center w-full min-h-screen col-start-2 space-y-4">
         <h1 className="mb-10 text-3xl font-extrabold ">Supabase + Next.js</h1>
         <p className="">Log in with github</p>
         <button onClick={signInWithGithub} className="py-3 border px-7">
